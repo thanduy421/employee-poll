@@ -1,0 +1,366 @@
+/* ============= GLOBAL CSS =============== */
+main {
+  width: 90vw;
+  max-width: var(--max-width);
+  margin: 5rem auto;
+}
+
+:root {
+  /* colors */
+  --primary-100: #ffe8e8;
+  --primary-200: #fed0d0;
+  --primary-300: #fcabab;
+  --primary-400: #f97979;
+  --primary-500: #ef4646;
+  --primary-600: #d32626;
+  --primary-700: #af1c1c;
+  --primary-800: #8f1919;
+  --primary-900: #751a1a;
+  --white: white;
+
+  /* grey */
+  --grey-50: #f8fafc;
+  --grey-100: #f1f5f9;
+  --grey-200: #e2e8f0;
+  --grey-300: #cbd5e1;
+  --grey-400: #94a3b8;
+  --grey-500: #64748b;
+  --grey-600: #475569;
+  --grey-700: #334155;
+  --grey-800: #1e293b;
+  --grey-900: #0f172a;
+  --backgroundColor: var(--grey-50);
+  --textColor: var(--grey-900);
+  --borderRadius: 0.25rem;
+  --letterSpacing: 1px;
+  --transition: 0.3s ease-in-out all;
+  --max-width: 1120px;
+  --fixed-width: 600px;
+
+  /* box shadow*/
+  --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+body {
+  background: var(--backgroundColor);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--textColor);
+}
+p {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  font-family: var(--headingFont);
+  font-weight: 400;
+  line-height: 1;
+  text-transform: capitalize;
+  letter-spacing: var(--letterSpacing);
+}
+
+h1 {
+  font-size: 3.052rem;
+}
+
+h2 {
+  font-size: 2.441rem;
+}
+
+h3 {
+  font-size: 1.953rem;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+/* buttons */
+
+.btn {
+  cursor: pointer;
+  color: var(--white);
+  background: var(--primary-500);
+  border: transparent;
+  border-radius: var(--borderRadius);
+  letter-spacing: var(--letterSpacing);
+  padding: 0.375rem 0.75rem;
+  box-shadow: var(--shadow-1);
+  transition: var(--transition);
+  text-transform: capitalize;
+  display: inline-block;
+}
+.btn:hover {
+  background: var(--primary-700);
+  box-shadow: var(--shadow-3);
+}
+
+/* form */
+
+.form {
+  width: 90vw;
+  max-width: var(--fixed-width);
+  background: var(--white);
+  border-radius: var(--borderRadius);
+  box-shadow: var(--shadow-2);
+  padding: 2rem 2.5rem;
+  margin: 3rem auto;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  border-radius: var(--borderRadius);
+  background: var(--backgroundColor);
+  border: 1px solid var(--grey-200);
+}
+
+::placeholder {
+  font-family: inherit;
+  color: var(--grey-400);
+}
+
+/* title */
+
+.title {
+  text-align: center;
+}
+/* ============= CUSTOM CSS =============== */
+/* optional overwrite*/
+body {
+  background: var(--primary-100);
+}
+
+main {
+  margin: auto;
+}
+
+/*poll page */
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.user-name {
+  font-weight: bold;
+}
+
+.poll-container {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.poll-container .user-info {
+  align-self: flex-end;
+}
+
+.poll-container h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.poll-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.poll-info > div {
+  margin-right: 8rem;
+}
+
+.poll-info > div:last-child {
+  margin-right: 0;
+}
+/* login page  */
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  margin: auto 15vw;
+}
+
+.content-container {
+  width: 90vw;
+  max-width: var(--fixed-width);
+  margin: 5rem 0;
+  background: white;
+  padding: 1.5rem 2rem;
+  border-radius: var(--borderRadius);
+}
+
+.content-container h1 {
+  margin-bottom: 1rem;
+}
+
+.login-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.login-bar select {
+  margin-left: 5px;
+  padding: 5px;
+}
+/*question*/
+.question {
+  border-radius: var(--borderRadius);
+  margin: 1rem auto;
+  border: 2px solid var(--grey-300);
+}
+
+.question p {
+  padding: 0.5rem 0.5rem;
+  color: var(--grey-600);
+}
+
+.btn-unactive {
+  background: var(--grey-400);
+}
+.btn-disabled {
+  color: var(--white);
+  border: transparent;
+  border-radius: var(--borderRadius);
+  letter-spacing: var(--letterSpacing);
+  padding: 0.375rem 0.75rem;
+  box-shadow: var(--shadow-1);
+  text-transform: capitalize;
+  display: inline-block;
+}
+
+.btn-active {
+  background: var(--primary-600);
+}
+
+.btn-detail {
+  margin: 0 0 0.25rem 0.5rem;
+}
+
+/*nav*/
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav li a {
+  margin-right: 20px;
+  text-decoration: none;
+  position: relative;
+  color: black;
+  font-size: 1.1rem;
+}
+
+.nav li a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: var(--primary-500);
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.nav li a:hover::after {
+  transform: scaleX(1);
+}
+
+.user-login {
+  display: flex;
+  align-items: center;
+}
+
+.user-name {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.avatar-small {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: var(--shadow-2);
+}
+
+/*new poll*/
+.form h1 {
+  margin-bottom: 1rem;
+}
+
+.form > form > * {
+  margin-bottom: 1rem;
+}
+
+.form-input {
+  width: 96%;
+}
+
+/* leaderboard */
+.user-record {
+  border: 2px solid var(--grey-300);
+  border-radius: var(--borderRadius);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+}
+
+.user-record .user-info {
+  flex-grow: 1;
+  margin-bottom: 0px;
+}
+
+.questions-record {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+
+/* Ensure all user-info items have the same height */
+.user-info span {
+  display: inline-block;
+  min-width: 100px;
+}
