@@ -20,10 +20,10 @@ const Dashboard = (props) => {
     <main>
     <div className="content-container">
       <h1 data-testid="test-db-heading">Dashboard</h1>
-      <button disabled={active} onClick={handleClick} className={active ? "btn" : "btn btn-unactive"}>
+      <button disabled={active} onClick={handleClick} className={active ? "btn btn-right" : "btn btn-right btn-unactive"}>
         unVote
       </button>
-      <button disabled={!active} onClick={handleClick} className={!active ? "btn" : "btn btn-unactive"}>
+      <button disabled={!active} onClick={handleClick} className={!active ? "btn btn-left" : "btn btn-left btn-unactive"}>
         Voted
       </button>
       <h3>{active ? "unAnswered" : "answered"} questions</h3>
