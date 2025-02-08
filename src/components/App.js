@@ -13,7 +13,7 @@ import Leaderboard from "./leaderboardComponents/Leaderboard";
 function App(props) {
   useEffect(() => {
     props.dispatch(handleInitialData());
-  }, []);
+  }, [props]);
 
   return (
     <>
