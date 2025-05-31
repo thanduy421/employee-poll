@@ -13,7 +13,7 @@ const Dashboard = (props) => {
   const questionArray = formatQuestions(props.questions, props.authedUser);
 
   const displayQuestions = questionArray.filter(
-    (question) => question.isAnswered !== active
+    (question) => question.isAnswered !== active && (question?.isActive === true)
   );
 
   return (

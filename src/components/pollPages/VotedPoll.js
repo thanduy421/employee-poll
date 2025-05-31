@@ -5,10 +5,10 @@ const VotedPoll = ({ options, authedUser }) => {
 
   return (
     <div className="poll-info">
-      <PollInfo 
-        option={option1} 
-        voteTotal={voteTotal} 
-        isSelect={isSelectOne} 
+      <PollInfo
+        option={option1}
+        voteTotal={voteTotal}
+        isSelect={isSelectOne}
       />
       <PollInfo
         option={option2}
@@ -21,13 +21,14 @@ const VotedPoll = ({ options, authedUser }) => {
 
 const PollInfo = ({ option, voteTotal, isSelect }) => {
   const voteCount = option.votes.length;
+  const isHideVoteCounts = true;
 
   return (
     <div>
       <button className={isSelect ? "btn-disabled btn-active" : "btn-disabled btn-unactive"} disabled={true}>{option.text}</button>
-      <p>
+      {!isHideVoteCounts && <p>
         Number of Votes: {voteCount} ({Math.round((voteCount / voteTotal) * 100)}%)
-      </p>
+      </p>}
     </div>
   );
 };

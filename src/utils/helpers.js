@@ -32,6 +32,7 @@ export function formatQuestions(questions, authedUser) {
     isAnswered: answeredCheck(question, authedUser),
     timestamp: question.timestamp,
     author: question.author,
+    isActive: question.isActive,
   }));
 
   return questionArray.sort((a, b) => b.timestamp - a.timestamp);

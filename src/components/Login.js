@@ -1,6 +1,8 @@
 import { connect } from "react-redux";
 import { handleLogin } from "../actions/shared";
 
+const TITLE = "Hỏi xoáy đáp xoay";
+
 const Login = (props) => {
   const onLogin = (e) => {
     props.dispatch(handleLogin(e.target.value));
@@ -9,7 +11,7 @@ const Login = (props) => {
   return (
     <main>
     <div className="content-container">
-      <h1 className="title">welcome to employee polls</h1>
+      <h1 className="title">{TITLE}</h1>
         <img src="../../images/welcome.jpg" alt="welcome" className="welcome-img"/>
         <div className="login-bar">
         <h5>Sign in as</h5>
@@ -28,7 +30,9 @@ const Login = (props) => {
 };
 
 const mapStateToProps = ({ users }) => {
-  const userArray = Object.values(users).map((user) => ({
+  const userArray = Object.values(users)
+  .filter((user) => user.isActive === true)
+  .map((user) => ({
     id: user.id,
     name: user.name,
   }));

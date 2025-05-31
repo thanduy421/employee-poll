@@ -6,6 +6,8 @@ import { handleVoteQuestion } from "../../actions/questions";
 import { Link } from "react-router-dom";
 import ErrorPage from "../ErrorPage";
 
+const TITLE = "bạn thích điều nào sau đây hơn?"
+
 const PollPage = (props) => {
   const { question_id, authedUser, questions, users } = props;
 
@@ -44,7 +46,7 @@ const PollPage = (props) => {
           className="avatar-small"
         />
       </div>
-      <h3>Would You Rather</h3>
+      <h3>{TITLE}</h3>
       <div className="poll-options">
         {isAnswered ? (
           <VotedPoll options={options} authedUser={authedUser} />
