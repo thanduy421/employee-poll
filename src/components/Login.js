@@ -9,7 +9,7 @@ const Login = (props) => {
   };
 
   return (
-    <main>
+    <main className="login">
     <div className="content-container">
       <h1 className="title">{TITLE}</h1>
         <img src="../../images/welcome.jpg" alt="welcome" className="welcome-img"/>

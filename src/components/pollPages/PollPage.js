@@ -6,7 +6,7 @@ import { handleVoteQuestion } from "../../actions/questions";
 import { Link } from "react-router-dom";
 import ErrorPage from "../ErrorPage";
 
-const TITLE = "bạn thích điều nào sau đây hơn?"
+const TITLE = "bạn thích điều nào hơn?"
 
 const PollPage = (props) => {
   const { question_id, authedUser, questions, users } = props;

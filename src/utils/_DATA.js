@@ -275,7 +275,7 @@ let questions = {
           "votes": [],
           "text": "thích được dẫn đi chơi"
       },
-      "isActive": true
+      "isActive": false
   },
   "m7g5jgwm8nelpz6qwz5p": {
       "id": "m7g5jgwm8nelpz6qwz5p",
@@ -289,7 +289,7 @@ let questions = {
           "votes": [],
           "text": "nhìn trước tương lai"
       },
-      "isActive": true
+      "isActive": false
   },
   "3haags6x03o5u35nwzffyg": {
       "id": "3haags6x03o5u35nwzffyg",
@@ -303,7 +303,7 @@ let questions = {
           "votes": [],
           "text": "ở riêng"
       },
-      "isActive": true
+      "isActive": false
   }
 };
 
